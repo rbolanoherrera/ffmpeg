@@ -1,0 +1,43 @@
+ffmpeg -i inputVideo.mp4 -i yourwatermark.png -filter_complex "overlay=5:5" -codec:a copy outputVideo.mp4
+
+ffmpeg -i "D:\WORKs\OlimpiaIT\Work\Videos ejemplos\Prueba zoom 18-03 (1).mp4" -i "C:\Users\ralfs\Pictures\MarcaAgua-Ralfs.png" -filter_complex "overlay=5:5" -codec:a copy outputVideo.mp4
+
+ffmpeg -i "D:\WORKs\OlimpiaIT\Work\Videos ejemplos\Prueba zoom 18-03 (1).mp4" -i "D:\WORKs\OlimpiaIT\Work\logolargo-blanco.png" -filter_complex "overlay=5:5" -codec:a copy outputVideo2.mp4
+
+ffmpeg -y -i "D:\WORKs\OlimpiaIT\Work\Videos ejemplos\Prueba zoom 18-03 (1).mp4" -i "D:\WORKs\OlimpiaIT\Work\logolargo-blanco.png" -filter_complex "overlay=10:10" -codec:a copy outputVideo2.mp4
+
+top right
+ffmpeg -y -i "D:\WORKs\OlimpiaIT\Work\Videos ejemplos\Prueba zoom 18-03 (1).mp4" -i "C:\Users\ralfs\Pictures\MarcaAgua-Ralfs.png" -filter_complex "overlay=W-w-5:5" -codec:a copy outputVideo-tr.mp4
+
+bottom right
+ffmpeg -y -i "D:\WORKs\OlimpiaIT\Work\Videos ejemplos\Prueba zoom 18-03 (1).mp4" -i "C:\Users\ralfs\Pictures\MarcaAgua-Ralfs.png" -filter_complex "overlay=main_w-overlay_w-5:main_h-overlay_h-5" -codec:a copy outputVideo-br.mp4
+
+bottom left
+ffmpeg -y -i "D:\WORKs\OlimpiaIT\Work\Videos ejemplos\Prueba zoom 18-03 (1).mp4" -i "C:\Users\ralfs\Pictures\MarcaAgua-Ralfs.png" -filter_complex "overlay=5:main_h-overlay_h" -codec:a copy outputVideo-bl.mp4
+
+
+
+bottom right
+ffmpeg -y -i "D:\WORKs\OlimpiaIT\Work\Videos ejemplos\Prueba zoom 18-03 (1).mp4" -i "D:\WORKs\OlimpiaIT\Work\logolargo-blanco2.png" -filter_complex "overlay=main_w-overlay_w-5:main_h-overlay_h-5" -codec:a copy outputVideo-br-2.mp4
+
+
+--doble filtro abajo izquierda y derecha
+ffmpeg -y -i "D:\WORKs\OlimpiaIT\Work\Videos ejemplos\Prueba zoom 18-03 (1).mp4" -i "D:\WORKs\OlimpiaIT\Work\logolargo-blanco2.png" -filter_complex "overlay=main_w-overlay_w-5:main_h-overlay_h-5" -i "C:\Users\ralfs\Pictures\MarcaAgua-Ralfs.png" -filter_complex "overlay=5:main_h-overlay_h" -codec:a copy outputVideo-br-2.mp4
+
+--agregando texto
+ffmpeg -y -i "D:\WORKs\OlimpiaIT\Work\Videos ejemplos\Prueba zoom 18-03 (1).mp4" -vf drawtext="fontfile=C:\Users\ralfs\Downloads\emmasophia.ttf: \ text='NOTARIA EJEMPLO': fontcolor=white: fontsize=24: box=1: boxcolor=black@0.5: \ boxborderw=5: x=(w-text_w)/2: y=(h-text_h)/2" -codec:a copy outputVideoText1.mp4
+
+--agregando left bottom
+ffmpeg -y -i "C:\Users\ralfs\Videos\sio-sio el-jedig.mp4" -vf drawtext="fontfile=C:\Users\ralfs\Downloads\emmasophia.ttf: \ text='Fecha\: 20201-03-24 Duración\: 20min': fontcolor=white: fontsize=20:  box=1: boxcolor=black@0.5: \ x=40: y=h-30" -codec:a copy outputVideoText2.mp4
+
+--agregando left bottom con TextFile
+ffmpeg -y -i "C:\Users\ralfs\Videos\sio-sio el-jedig.mp4" -vf drawtext="fontfile=C:\Users\ralfs\Downloads\emmasophia.ttf:textfile=tiempoNotaria:fontcolor=white:fontsize=20: \ x=40: y=h-30" -codec:a copy outputVideoText2.mp4
+ffmpeg -y -i "C:\Users\ralfs\Videos\sio-sio el-jedig.mp4" -vf drawtext="textfile=tiempoNotaria.txt: fontcolor=white: fontsize=20: x=25: y=h-50: box=1: boxcolor=black@0.5:" -codec:a copy outputVideoText2.mp4
+ffmpeg -y -i "D:\WORKs\OlimpiaIT\Work\Videos ejemplos\Prueba zoom 18-03 (1).mp4" -vf drawtext="textfile=tiempoNotaria.txt: fontcolor=white: fontsize=20: x=25: y=h-50: box=1: boxcolor=black@0.5:" -codec:a copy outputVideoText2.mp4
+
+
+ffmpeg -y -i "D:\WORKs\OlimpiaIT\Work\Videos ejemplos\Prueba zoom 18-03 (1).mp4" -vf drawtext="textfile=tiempoNotaria.txt: fontcolor=white: fontsize=20: x=25: y=h-50: box=1: boxcolor=black@0.5:" -codec:a copy outputVideoText2.mp4
+ffmpeg -y -i "outputVideoText2.mp4" -i "D:\WORKs\OlimpiaIT\Work\logolargo-blanco2.png" -filter_complex "overlay=main_w-overlay_w-5:main_h-overlay_h-5" -codec:a copy outputVideo-textLogo.mp4
+
+la fecha del tramite: getdate()
+duración del video
