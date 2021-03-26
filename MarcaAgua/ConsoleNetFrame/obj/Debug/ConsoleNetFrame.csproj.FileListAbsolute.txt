@@ -1,0 +1,9 @@
+D:\dev\NetCore\ffmpeg\MarcaAgua\ConsoleNetFrame\bin\Debug\ConsoleNetFrame.exe.config
+D:\dev\NetCore\ffmpeg\MarcaAgua\ConsoleNetFrame\bin\Debug\ConsoleNetFrame.exe
+D:\dev\NetCore\ffmpeg\MarcaAgua\ConsoleNetFrame\bin\Debug\ConsoleNetFrame.pdb
+D:\dev\NetCore\ffmpeg\MarcaAgua\ConsoleNetFrame\bin\Debug\MediaToolkit.dll
+D:\dev\NetCore\ffmpeg\MarcaAgua\ConsoleNetFrame\obj\Debug\ConsoleNetFrame.csprojAssemblyReference.cache
+D:\dev\NetCore\ffmpeg\MarcaAgua\ConsoleNetFrame\obj\Debug\ConsoleNetFrame.csproj.CoreCompileInputs.cache
+D:\dev\NetCore\ffmpeg\MarcaAgua\ConsoleNetFrame\obj\Debug\ConsoleNetFrame.csproj.CopyComplete
+D:\dev\NetCore\ffmpeg\MarcaAgua\ConsoleNetFrame\obj\Debug\ConsoleNetFrame.exe
+D:\dev\NetCore\ffmpeg\MarcaAgua\ConsoleNetFrame\obj\Debug\ConsoleNetFrame.pdb

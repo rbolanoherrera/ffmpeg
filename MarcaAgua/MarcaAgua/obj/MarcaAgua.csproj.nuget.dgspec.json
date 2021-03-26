@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\dev\\NetCore\\MarcaAgua\\MarcaAgua\\MarcaAgua.csproj": {}
+    "D:\\dev\\NetCore\\ffmpeg\\MarcaAgua\\MarcaAgua\\MarcaAgua.csproj": {}
   },
   "projects": {
-    "D:\\dev\\NetCore\\MarcaAgua\\MarcaAgua\\MarcaAgua.csproj": {
+    "D:\\dev\\NetCore\\ffmpeg\\MarcaAgua\\MarcaAgua\\MarcaAgua.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\dev\\NetCore\\MarcaAgua\\MarcaAgua\\MarcaAgua.csproj",
+        "projectUniqueName": "D:\\dev\\NetCore\\ffmpeg\\MarcaAgua\\MarcaAgua\\MarcaAgua.csproj",
         "projectName": "MarcaAgua",
-        "projectPath": "D:\\dev\\NetCore\\MarcaAgua\\MarcaAgua\\MarcaAgua.csproj",
-        "packagesPath": "C:\\Users\\ralfs\\.nuget\\packages\\",
-        "outputPath": "D:\\dev\\NetCore\\MarcaAgua\\MarcaAgua\\obj\\",
+        "projectPath": "D:\\dev\\NetCore\\ffmpeg\\MarcaAgua\\MarcaAgua\\MarcaAgua.csproj",
+        "packagesPath": "C:\\Users\\abolanos\\.nuget\\packages\\",
+        "outputPath": "D:\\dev\\NetCore\\ffmpeg\\MarcaAgua\\MarcaAgua\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ralfs\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\abolanos\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

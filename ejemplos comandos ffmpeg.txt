@@ -39,5 +39,8 @@ ffmpeg -y -i "D:\WORKs\OlimpiaIT\Work\Videos ejemplos\Prueba zoom 18-03 (1).mp4"
 ffmpeg -y -i "D:\WORKs\OlimpiaIT\Work\Videos ejemplos\Prueba zoom 18-03 (1).mp4" -vf drawtext="textfile=tiempoNotaria.txt: fontcolor=white: fontsize=20: x=25: y=h-50: box=1: boxcolor=black@0.5:" -codec:a copy outputVideoText2.mp4
 ffmpeg -y -i "outputVideoText2.mp4" -i "D:\WORKs\OlimpiaIT\Work\logolargo-blanco2.png" -filter_complex "overlay=main_w-overlay_w-5:main_h-overlay_h-5" -codec:a copy outputVideo-textLogo.mp4
 
+--Duración del video
+ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 sio-sio_el-jedig.mp4
+
 la fecha del tramite: getdate()
 duración del video

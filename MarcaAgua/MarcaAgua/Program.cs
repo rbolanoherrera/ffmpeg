@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
-using System.Threading;
+using System.Globalization;
 using System.Threading.Tasks;
 
 namespace MarcaAgua
@@ -9,6 +9,7 @@ namespace MarcaAgua
     {
         //static Process process;
         static TaskCompletionSource<bool> eventHandled;
+        static string workingDirectory = Environment.CurrentDirectory;// @"D:\dev\Net\libs\ffmpeg\bin";
 
         static async Task Main(string[] args)
         {
@@ -16,10 +17,22 @@ namespace MarcaAgua
 
             string fileName = Environment.CurrentDirectory + "\\sio-sio_el-jedig.mp4";
             fileName = Environment.CurrentDirectory + "\\PruebaZoom-18-03-01.mp4";
-            string workingDirectory = Environment.CurrentDirectory;// @"D:\dev\Net\libs\ffmpeg\bin";
             string outputFileName = "videoConTexto_" + getCurrentDate() + DateTime.Now.Millisecond.ToString() + ".mp4";
             string strCommand = "";
-            string duracion = "9 min";
+            string duracion = "";
+
+            //obtener la duración del Video
+            duracion = GetVideoDuration(fileName);
+
+            if (!string.IsNullOrEmpty(duracion))
+            {
+                if (Convert.ToDecimal(duracion, CultureInfo.InvariantCulture) > 60)
+                    duracion = Math.Round((Convert.ToDecimal(duracion, CultureInfo.InvariantCulture) / 60), 2).ToString() + " min";
+                else
+                    duracion = Math.Round(Convert.ToDecimal(duracion, CultureInfo.InvariantCulture), 2).ToString() + " seg";
+            }
+            else
+                duracion = "--";
 
             //coimando con texto en un Archivo
             //string strCommand = "-y -i \"" + fileName + "\" -vf drawtext=\"textfile=tiempoNotaria.txt: fontcolor=white: fontsize=20: x=25: y=h-50: box=1: boxcolor=black@0.5:\" -codec:a copy \"" + outputFileName + "\"";
@@ -150,21 +163,37 @@ namespace MarcaAgua
             return DateTime.Now.Year.ToString() + DateTime.Now.Month.ToString("00") + DateTime.Now.Day.ToString("00") +
                 "_" + DateTime.Now.Hour.ToString("00") + DateTime.Now.Minute.ToString("00") + DateTime.Now.Second.ToString("00");
         }
-        
+
         static string getCurrentDateText()
         {
-            return DateTime.Now.Day.ToString("00") + "/"+ DateTime.Now.Month.ToString("00") + "/" + DateTime.Now.Year.ToString("0000");
+            return DateTime.Now.Day.ToString("00") + "/" + DateTime.Now.Month.ToString("00") + "/" + DateTime.Now.Year.ToString("0000");
         }
 
-        private static TimeSpan GetVideoDuration(string filePath)
+        private static string GetVideoDuration(string fileName)
         {
-            using (var shell = ShellObject.FromParsingName(filePath))
+            string duracion = "";
+
+            var proc = new Process
             {
-                IShellProperty prop = shell.Properties.System.Media.Duration;
-                var t = (ulong)prop.ValueAsObject;
-                return TimeSpan.FromTicks((long)t);
+                StartInfo = new ProcessStartInfo
+                {
+                    FileName = Environment.CurrentDirectory + "\\ffprobe.exe",
+                    Arguments = $"-v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 {fileName}",
+                    WorkingDirectory = workingDirectory,
+                    UseShellExecute = false,
+                    RedirectStandardOutput = true,
+                    CreateNoWindow = true
+                }
+            };
+
+            proc.Start();
+            while (!proc.StandardOutput.EndOfStream)
+            {
+                duracion = proc.StandardOutput.ReadLine();
             }
+
+            return duracion;
         }
 
-    }
+}
 }

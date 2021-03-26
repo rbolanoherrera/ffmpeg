@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PxPh7c++Jv1X06RJF8zksu3skw40FfsGmNfA8xXriEFT6blGDov5G+DEhyOvub6qmkUWNeYFK8Xi531z6hbPmg==",
+  "dgSpecHash": "t7c6REPUWkwK9CXWr+hbA/GSilrY9jdFwvJJ+ioCL1EgrmczhvfXyYlsS5FEn+WVefkXk8AMEAse923GVzG0qQ==",
   "success": true,
-  "projectFilePath": "D:\\dev\\NetCore\\MarcaAgua\\MarcaAgua\\MarcaAgua.csproj",
+  "projectFilePath": "D:\\dev\\NetCore\\ffmpeg\\MarcaAgua\\MarcaAgua\\MarcaAgua.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
