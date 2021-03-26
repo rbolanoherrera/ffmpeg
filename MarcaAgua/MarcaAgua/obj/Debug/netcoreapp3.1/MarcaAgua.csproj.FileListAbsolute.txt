@@ -1,0 +1,13 @@
+D:\dev\NetCore\MarcaAgua\MarcaAgua\obj\Debug\netcoreapp3.1\MarcaAgua.csprojAssemblyReference.cache
+D:\dev\NetCore\MarcaAgua\MarcaAgua\obj\Debug\netcoreapp3.1\MarcaAgua.AssemblyInfoInputs.cache
+D:\dev\NetCore\MarcaAgua\MarcaAgua\obj\Debug\netcoreapp3.1\MarcaAgua.AssemblyInfo.cs
+D:\dev\NetCore\MarcaAgua\MarcaAgua\obj\Debug\netcoreapp3.1\MarcaAgua.csproj.CoreCompileInputs.cache
+D:\dev\NetCore\MarcaAgua\MarcaAgua\bin\Debug\netcoreapp3.1\MarcaAgua.exe
+D:\dev\NetCore\MarcaAgua\MarcaAgua\bin\Debug\netcoreapp3.1\MarcaAgua.deps.json
+D:\dev\NetCore\MarcaAgua\MarcaAgua\bin\Debug\netcoreapp3.1\MarcaAgua.runtimeconfig.json
+D:\dev\NetCore\MarcaAgua\MarcaAgua\bin\Debug\netcoreapp3.1\MarcaAgua.runtimeconfig.dev.json
+D:\dev\NetCore\MarcaAgua\MarcaAgua\bin\Debug\netcoreapp3.1\MarcaAgua.dll
+D:\dev\NetCore\MarcaAgua\MarcaAgua\bin\Debug\netcoreapp3.1\MarcaAgua.pdb
+D:\dev\NetCore\MarcaAgua\MarcaAgua\obj\Debug\netcoreapp3.1\MarcaAgua.dll
+D:\dev\NetCore\MarcaAgua\MarcaAgua\obj\Debug\netcoreapp3.1\MarcaAgua.pdb
+D:\dev\NetCore\MarcaAgua\MarcaAgua\obj\Debug\netcoreapp3.1\MarcaAgua.genruntimeconfig.cache
